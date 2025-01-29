@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/coupon_api")
+//@CrossOrigin
 public class CouponController {
 
     @Autowired
