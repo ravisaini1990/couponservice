@@ -15,15 +15,15 @@ public class Coupon {
     private String code;
     @Column
     private BigDecimal discount;
-    @Column
-    private String exp_date;
+    @Column(name = "exp_date")
+    private String expDate;
 
     public Coupon() {}
 
     public Coupon(String code, BigDecimal discount, String exp_date) {
         this.code = code;
         this.discount = discount;
-        this.exp_date = exp_date;
+        this.expDate = exp_date;
     }
 
     public String getCode() {
@@ -43,11 +43,11 @@ public class Coupon {
     }
 
     public String getExp_date() {
-        return exp_date;
+        return expDate;
     }
 
     public void setExp_date(String exp_date) {
-        this.exp_date = exp_date;
+        this.expDate = exp_date;
     }
 
     @Override
@@ -56,7 +56,7 @@ public class Coupon {
                 "id=" + id +
                 ", code='" + code + '\'' +
                 ", discount=" + discount +
-                ", exp_date='" + exp_date + '\'' +
+                ", exp_date='" + expDate + '\'' +
                 '}';
     }
 }

@@ -5,6 +5,8 @@ import com.ravi.couponservice.repository.CouponRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/coupon_api")
 public class CouponController {
@@ -22,5 +24,8 @@ public class CouponController {
         return  couponRepository.findByCode(code);
     }
 
-
+    @GetMapping("/coupons/allCoupon")
+    public List<Coupon> getCoupon() {
+        return  couponRepository.findAll();
+    }
 }
