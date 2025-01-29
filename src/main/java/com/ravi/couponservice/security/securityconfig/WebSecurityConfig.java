@@ -65,7 +65,9 @@ public class WebSecurityConfig {
         );
         httpSecurity.securityContext(httpSecuritySecurityContextConfigurer ->
                 httpSecuritySecurityContextConfigurer.requireExplicitSave(true));
-        httpSecurity.csrf(AbstractHttpConfigurer::disable);
+
+        //Enable by defualt Csrf - to prevent unwanted access to cookies of current session by cross origin
+        //httpSecurity.csrf(AbstractHttpConfigurer::disable);
         return httpSecurity.build();
     }
 

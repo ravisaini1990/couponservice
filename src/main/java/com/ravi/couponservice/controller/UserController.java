@@ -41,7 +41,7 @@ public class UserController {
     public String registerUser(User user) {
         Set<Role> roleSet = new HashSet<>();
         Role userRole = new Role();
-        userRole.setId(2);
+        userRole.setId(2); //2 is for type User and 1 for Admin , Can be taken via UI of Register page too
         roleSet.add(userRole);
 
         user.setRoles(roleSet);
